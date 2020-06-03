@@ -4,20 +4,20 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'Hello Arya',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
   bindViewTap: function() {
-    if(this.data.motto == 'Hello World'){
+    if(this.data.motto == 'Hello Arya'){
       this.setData({
         motto: '别点了！'
       })
     }else{
       this.setData({
-        motto: 'Hello World'
+        motto: 'Hello Arya'
       })
     }
     //wx.navigateTo({
