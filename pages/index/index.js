@@ -11,9 +11,18 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    if(this.data.motto == 'Hello World'){
+      this.setData({
+        motto: '别点了！'
+      })
+    }else{
+      this.setData({
+        motto: 'Hello World'
+      })
+    }
+    //wx.navigateTo({
+    //  url: '../logs/logs'
+    //})
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
