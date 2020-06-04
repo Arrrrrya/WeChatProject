@@ -18,7 +18,7 @@ let list_data = [
     music: {
       dataUrl: 'https://sharefs.yun.kugou.com/202006041348/d52cc8b3b142f471f16f5b712af4a8d6/G207/M08/08/15/r5QEAF5svyyAQ7KnAC2p2PGN1BY427.mp3', // 音乐链接
       title: 'the sound of silence',   // 音乐标题
-      coverImgUrl: 'https://mmbiz.qpic.cn/mmbiz_jpg/TSqGRUhTf3vj4AFYvXhLVbyicw76mXMVf9wqdWmHrSz5SQcLw0WtiahX4kK4ib0UPEf4JzdP7ubMdPsbDZiawBQHTA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1',
+      coverImgUrl: 'https://cdn.u1.huluxia.com/g4/M01/59/05/rBAAdl7Yv0CAWjjsABWO8XmyjWY440.png',
     },
     postId: 0
   },
@@ -40,7 +40,7 @@ let list_data = [
     music: {
       dataUrl: 'https://sharefs.yun.kugou.com/202006041348/d52cc8b3b142f471f16f5b712af4a8d6/G207/M08/08/15/r5QEAF5svyyAQ7KnAC2p2PGN1BY427.mp3', // 音乐链接
       title: 'the sound of silence',   // 音乐标题
-      coverImgUrl: 'https://mmbiz.qpic.cn/mmbiz_jpg/TSqGRUhTf3vj4AFYvXhLVbyicw76mXMVf9wqdWmHrSz5SQcLw0WtiahX4kK4ib0UPEf4JzdP7ubMdPsbDZiawBQHTA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1',
+      coverImgUrl: 'https://cdn.u1.huluxia.com/g4/M01/59/05/rBAAdl7Yv0CAWjjsABWO8XmyjWY440.png',
     },
     postId: 1
   },
@@ -62,7 +62,7 @@ let list_data = [
     music: {
       dataUrl: 'https://sharefs.yun.kugou.com/202006041348/d52cc8b3b142f471f16f5b712af4a8d6/G207/M08/08/15/r5QEAF5svyyAQ7KnAC2p2PGN1BY427.mp3', // 音乐链接
       title: 'the sound of silence',   // 音乐标题
-      coverImgUrl: 'https://mmbiz.qpic.cn/mmbiz_jpg/TSqGRUhTf3vj4AFYvXhLVbyicw76mXMVf9wqdWmHrSz5SQcLw0WtiahX4kK4ib0UPEf4JzdP7ubMdPsbDZiawBQHTA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1',
+      coverImgUrl: 'https://cdn.u1.huluxia.com/g4/M01/59/05/rBAAdl7Yv0CAWjjsABWO8XmyjWY440.png',
     },
     postId: 2
   },
@@ -81,7 +81,7 @@ let list_data = [
     music: {
       dataUrl: 'https://sharefs.yun.kugou.com/202006041348/d52cc8b3b142f471f16f5b712af4a8d6/G207/M08/08/15/r5QEAF5svyyAQ7KnAC2p2PGN1BY427.mp3', // 音乐链接
       title: 'the sound of silence',   // 音乐标题
-      coverImgUrl: 'https://mmbiz.qpic.cn/mmbiz_jpg/TSqGRUhTf3vj4AFYvXhLVbyicw76mXMVf9wqdWmHrSz5SQcLw0WtiahX4kK4ib0UPEf4JzdP7ubMdPsbDZiawBQHTA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1',
+      coverImgUrl: 'https://cdn.u1.huluxia.com/g4/M01/59/05/rBAAdl7Yv0CAWjjsABWO8XmyjWY440.png',
     },
     postId: 3
   },
@@ -100,7 +100,7 @@ let list_data = [
     music: {
       dataUrl: 'https://sharefs.yun.kugou.com/202006041348/d52cc8b3b142f471f16f5b712af4a8d6/G207/M08/08/15/r5QEAF5svyyAQ7KnAC2p2PGN1BY427.mp3', // 音乐链接
       title: 'the sound of silence',   // 音乐标题
-      coverImgUrl: 'https://mmbiz.qpic.cn/mmbiz_jpg/TSqGRUhTf3vj4AFYvXhLVbyicw76mXMVf9wqdWmHrSz5SQcLw0WtiahX4kK4ib0UPEf4JzdP7ubMdPsbDZiawBQHTA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1',
+      coverImgUrl: 'https://cdn.u1.huluxia.com/g4/M01/59/05/rBAAdl7Yv0CAWjjsABWO8XmyjWY440.png',
     },
     postId: 4
   },
@@ -121,7 +121,7 @@ let list_data = [
     music: {
       dataUrl: 'https://sharefs.yun.kugou.com/202006041348/d52cc8b3b142f471f16f5b712af4a8d6/G207/M08/08/15/r5QEAF5svyyAQ7KnAC2p2PGN1BY427.mp3', // 音乐链接
       title: 'the sound of silence',   // 音乐标题
-      coverImgUrl: 'https://mmbiz.qpic.cn/mmbiz_jpg/TSqGRUhTf3vj4AFYvXhLVbyicw76mXMVf9wqdWmHrSz5SQcLw0WtiahX4kK4ib0UPEf4JzdP7ubMdPsbDZiawBQHTA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1',
+      coverImgUrl: 'https://cdn.u1.huluxia.com/g4/M01/59/05/rBAAdl7Yv0CAWjjsABWO8XmyjWY440.png',
     },
     postId: 5
   },
@@ -142,7 +142,7 @@ let list_data = [
     music: {
       dataUrl: 'https://sharefs.yun.kugou.com/202006041348/d52cc8b3b142f471f16f5b712af4a8d6/G207/M08/08/15/r5QEAF5svyyAQ7KnAC2p2PGN1BY427.mp3', // 音乐链接
       title: 'the sound of silence',   // 音乐标题
-      coverImgUrl: 'https://mmbiz.qpic.cn/mmbiz_jpg/TSqGRUhTf3vj4AFYvXhLVbyicw76mXMVf9wqdWmHrSz5SQcLw0WtiahX4kK4ib0UPEf4JzdP7ubMdPsbDZiawBQHTA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1',
+      coverImgUrl: 'https://cdn.u1.huluxia.com/g4/M01/59/05/rBAAdl7Yv0CAWjjsABWO8XmyjWY440.png',
     },
     postId: 6
   },
