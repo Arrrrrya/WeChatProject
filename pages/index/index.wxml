@@ -1,0 +1,10 @@
+<!--pages/index/index.wxml-->
+<!-- <text>pages/index/index.wxml</text> -->
+<view class='indexContainer' catchtap="handleMainView">
+  <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+  <button bindgetuserinfo="handleGetUserInfo" style="display:{{isShow?'block':'none'}}" open-type="getUserInfo">授权登录</button>
+  <text class='userName' style="display:{{isShow?'none':'block'}}">hello {{userInfo.nickName}}</text>
+  <view class='goStudy' catchtap="handleParent" style="display:{{isShow?'none':'block'}}">
+    <text bindtap="handleChild">进入小程序主页</text>
+  </view>
+</view>

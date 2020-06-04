@@ -1,0 +1,55 @@
+/* pages/template/list-template.wxss */
+.temContainer{
+  display: flex;
+  flex-flow: column;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+}
+
+.avatar_date{
+  padding: 10rpx;
+}
+
+.avatar_date image{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.avatar_date text{
+  font-size: 32rpx;
+}
+
+.company{
+  margin: 10rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.contentImg{
+  width: 100%;
+  height: 460rpx;
+}
+
+.content{
+  font-size: 32rpx;
+  text-indent: 32rpx;
+}
+
+.collections image{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+  margin: 10rpx;
+}
+
+.collections text{
+  font-size: 28rpx;
+  vertical-align: middle;
+  margin: 10rpx;
+}
+
+
+
+
