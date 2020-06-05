@@ -6,11 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detailObj:{},
-    index:null,
-    isCollected:false,
-    isShared:false,
-    isMusicPlay:false
+    detailObj: {},
+    index: null,
+    isCollected: false,
+    isShared: false,
+    isMusicPlay: false
   },
 
   /**
@@ -21,8 +21,8 @@ Page({
     // 获取参数值
     let index = options.index;
     this.setData({
-      detailObj:datas.list_data[index],
-      index:index
+      detailObj: datas.list_data[index],
+      index: index
     })
 
     // 根据本地缓存的数据判断用户是否收藏/分享当前
@@ -31,99 +31,107 @@ Page({
     let detailStorage_isShared = wx.getStorageSync('isShared');
     let detailStorage_isMusicOn = wx.getStorageSync('isMusicOn')
     // 在缓存中初始化空对象
-    if(!detailStorage_isCollected){
+    if (!detailStorage_isCollected) {
       wx.setStorageSync('isCollected', {})
     }
-    if(!detailStorage_isShared){
+    if (!detailStorage_isShared) {
       wx.setStorageSync('isShared', {})
     }
-    if(!detailStorage_isMusicOn){
+    if (!detailStorage_isMusicOn) {
       wx.setStorageSync('isMusicOn', false)
     }
-    console.log(detailStorage_isCollected,"是否收藏");
-    console.log(detailStorage_isShared,"是否分享");
-    console.log(detailStorage_isMusicOn,"是否音乐在放");
-    
+    console.log(detailStorage_isCollected, "是否收藏");
+    console.log(detailStorage_isShared, "是否分享");
+    console.log(detailStorage_isMusicOn, "是否音乐在放");
+
     this.setData({
-      isCollected:wx.getStorageSync('isCollected')[index]?true:false,
-      isShared:wx.getStorageSync('isShared')[index]?true:false,
-      isMusicPlay:wx.getStorageSync('isMusicOn')?true:false
+      isCollected: wx.getStorageSync('isCollected')[index] ? true : false,
+      isShared: wx.getStorageSync('isShared')[index] ? true : false,
+      isMusicPlay: wx.getStorageSync('isMusicOn') ? true : false
     })
 
     // 监听
-    wx.onBackgroundAudioPlay((res)=>{
+    wx.onBackgroundAudioPlay((res) => {
       wx.setStorage({
-        key:"isMusicOn",
-        data:true
+        key: "isMusicOn",
+        data: true
       })
     })
-    wx.onBackgroundAudioPause((res)=>{
+    wx.onBackgroundAudioPause((res) => {
       wx.setStorage({
-        key:"isMusicOn",
-        data:false
+        key: "isMusicOn",
+        data: false
       })
     })
     wx.onBackgroundAudioStop((res) => {
       wx.setStorage({
-        key:"isMusicOn",
-        data:false
+        key: "isMusicOn",
+        data: false
       })
     })
   },
 
-  refreshPic(){
-    
+  refreshPic() {
+
   },
 
-  handleMusicPlay(){
+  handleMusicPlay() {
     // 处理音乐播放
     this.setData({
-      isMusicPlay:!this.data.isMusicPlay
+      isMusicPlay: !this.data.isMusicPlay
     })
     // 控制音乐播放
-    if(this.data.isMusicPlay){
-      let{dataUrl,title} = this.data.detailObj.music;
-      console.log({dataUrl,title});
+    if (this.data.isMusicPlay) {
+      let {
+        dataUrl,
+        title
+      } = this.data.detailObj.music;
+      console.log({
+        dataUrl,
+        title
+      });
       wx.playBackgroundAudio({
         dataUrl,
         title
       })
-    }else{
+    } else {
       wx.pauseBackgroundAudio();
     }
 
     wx.setStorage({
-      key:"isMusicOn",
-      data:this.data.isMusicPlay,
-      success:()=>{
+      key: "isMusicOn",
+      data: this.data.isMusicPlay,
+      success: () => {
         console.log("缓存成功");
       }
     })
-    
+
   },
 
-  handleCollection(){
+  handleCollection() {
     this.setData({
-      isCollected:!this.data.isCollected
+      isCollected: !this.data.isCollected
     })
     // 提示
     wx.showToast({
-      title:this.data.isCollected?'收藏成功':'取消收藏',
-      icon:"success"
+      title: this.data.isCollected ? '收藏成功' : '取消收藏',
+      icon: "success"
     })
     // 缓存数据(是否收藏)到本地
     //{1:true,2:false}
-    let {index} = this.data;
+    let {
+      index
+    } = this.data;
     //let obj = {}; 不可行，应该是追加
     wx.getStorage({
       key: 'isCollected',
-      success:(datas)=>{
+      success: (datas) => {
         let obj = datas.data;
         obj[index] = this.data.isCollected;
         wx.setStorage({
-          key:"isCollected",
-          data:obj,
-          success:()=>{
+          key: "isCollected",
+          data: obj,
+          success: () => {
             console.log("缓存成功");
           }
         })
@@ -131,7 +139,7 @@ Page({
     })
   },
 
-  handleShare(){
+  handleShare() {
     // this.setData({
     //   isShared:!this.data.isShared
     // })
@@ -157,15 +165,15 @@ Page({
     // })
 
     wx.showActionSheet({
-      itemList:[
+      itemList: [
         "分享到朋友圈",
         "分享到微博",
         "分享到QQ"
       ],
-      success (res) {
+      success(res) {
         console.log(res.tapIndex)
       },
-      fail (res) {
+      fail(res) {
         console.log(res.errMsg)
       }
     })

@@ -5,42 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-    msg:'arya',
-    userInfo:{},
+    msg: 'arya',
+    userInfo: {},
     isShow: true
   },
 
-  handleMainView(){
+  handleMainView() {
     console.log("view元素");
   },
-  handleParent(){
+  handleParent() {
     console.log("父元素");
     // 点击跳转list页面
     wx.switchTab({
       url: '/pages/list/list',
     })
   },
-  handleChild(){
+  handleChild() {
     console.log("子元素");
   },
-  handleGetUserInfo(res){
+  handleGetUserInfo(res) {
     console.log(res);
     // 判断用户是否允许授权
-    if(res.detail.rawData){
+    if (res.detail.rawData) {
       //刷新页面
       this.getUserInfo();
     }
   },
 
-  getUserInfo(){
+  getUserInfo() {
     // 判断用户是否授权
     wx.getSetting({
       complete: (res) => {
         console.log(res)
-        if(res.authSetting['scope.userInfo']){
+        if (res.authSetting['scope.userInfo']) {
           // 已经授权
           this.setData({
-            isShow : false
+            isShow: false
           })
         }
       },
@@ -51,15 +51,15 @@ Page({
       success: (res) => {
         console.log(res);
         this.setData({
-          userInfo:res.userInfo
+          userInfo: res.userInfo
         })
       },
-      fail:()=>{
+      fail: () => {
         console.log("获取用户行为失败");
       }
     })
   },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */

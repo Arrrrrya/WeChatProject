@@ -17,8 +17,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/list/list",
         "text": "文章",
         "iconPath": "/images/tab/yuedu.png",

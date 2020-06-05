@@ -1,11 +1,12 @@
 /* pages/list/list.wxss */
 @import "/pages/template/list-template.wxss";
 
-swiper{
+swiper {
   width: 100%;
   height: 400rpx;
 }
-swiper image{
+
+swiper image {
   width: 100%;
   height: 100%;
 }

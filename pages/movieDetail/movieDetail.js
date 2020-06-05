@@ -1,13 +1,13 @@
 // pages/movieDetail/movieDetail.js
- let appDatas = getApp();
-console.log(appDatas,"电影列表");
+let appDatas = getApp();
+console.log(appDatas, "电影列表");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    movieDetail:{}
+    movieDetail: {}
   },
 
   /**
@@ -16,13 +16,13 @@ Page({
   onLoad: function (options) {
     console.log(options)
     this.setData({
-      movieDetail:appDatas.data.moviesArray[options.index]
+      movieDetail: appDatas.data.moviesArray[options.index]
     })
     //console.log(movieDetail);// 会报错 movieDetail is not defined
     console.log(this.data.movieDetail);
   },
 
-  btn_click(){
+  btn_click() {
     wx.showToast({
       title: '该功能还未开放！',
     })

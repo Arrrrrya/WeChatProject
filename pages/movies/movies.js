@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    moviesArray:[]
+    moviesArray: []
   },
 
   /**
@@ -16,14 +16,14 @@ Page({
   onLoad: function (options) {
     wx.request({
       url: 'http://t.yushu.im/v2/movie/top250',
-      header:{
-        "Content-type":"json",
+      header: {
+        "Content-type": "json",
       },
-      success:(res)=>{
+      success: (res) => {
         console.log(res);
         // 更新状态值
         this.setData({
-          moviesArray:res.data.subjects
+          moviesArray: res.data.subjects
         });
         //appDatas.data.moviesArray = res.data.subjects;
         appDatas.data.moviesArray = this.data.moviesArray;
@@ -35,7 +35,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**

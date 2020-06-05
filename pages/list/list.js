@@ -1,13 +1,13 @@
 // pages/list/list.js
 let datas = require("../../datas/list-data.js");
-console.log(datas,typeof datas);
+console.log(datas, typeof datas);
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    listArr:[]
+    listArr: []
   },
 
   /**
@@ -15,22 +15,22 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      listArr:datas.list_data
+      listArr: datas.list_data
     })
   },
 
   // 点击跳转detail页面
-  toDetail(event){
+  toDetail(event) {
     console.log(event);
     wx.navigateTo({
-      url: '/pages/detail/detail?index='+event.currentTarget.dataset.index,
+      url: '/pages/detail/detail?index=' + event.currentTarget.dataset.index,
     })
   },
 
   // 点击轮播图跳转detail页面
-  carouselToDetail(event){
+  carouselToDetail(event) {
     wx.navigateTo({
-      url: '/pages/detail/detail?index='+event.target.dataset.index,
+      url: '/pages/detail/detail?index=' + event.target.dataset.index,
     })
   },
 
