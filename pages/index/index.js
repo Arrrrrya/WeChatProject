@@ -7,7 +7,9 @@ Page({
   data: {
     msg: 'arya',
     userInfo: {},
-    isShow: true
+    isShow: true,
+    currentTimer: 0,
+    currentStopTimer: 0
   },
 
   handleMainView() {
@@ -22,7 +24,64 @@ Page({
   },
   handleChild() {
     console.log("子元素");
+    //this.testThis()
+    //this.testTimeOut()
+    //this.testSetInterval()
   },
+
+  testSetInterval() {
+    let that = this
+    let i = 1
+    that.setData({
+      currentTimer: setInterval(function () {
+        console.log(i++, "定时器运行中: ", that.data.currentTimer)
+        if (i == 5) {
+          clearTimeout(that.data.currentStopTimer)
+          console.log("对不起，截胡了: ", that.data.currentTimer)
+        }
+        // if(i == 10){
+        //   clearInterval(n)
+        //   console.log(i++,"定时器已经停止！")
+        // }
+      }, 1000)
+    })
+  },
+
+  testTimeOut() {
+    let that = this
+    that.setData({
+      currentStopTimer: setTimeout(function () {
+        console.log("会停止的定时器，到时间结束了！")
+      }, 8000)
+    })
+    console.log(that.data.currentStopTimer, "当前定时器_会停止的")
+  },
+
+  testThis() {
+    console.log(this, "testThis 1111")
+    var x = "i am a string"
+    var checkThis = function () {
+      console.log(x, "checkThis 2222")
+      var that = this
+      console.log(this, "checkThis 3333") // undefined
+      console.log(that, "checkThis 4444") // undefined
+    }
+    var obj = {}
+    obj.x = 100
+    obj.y = function () {
+      console.log(obj.x, "obj.y 5555") // 100
+      console.log(this, "obj.y 6666") // 直接调用obj.y时，this = obj
+    }
+    var obj2 = obj.y
+    var obj3 = {}
+    obj3.z = obj.y
+
+    obj.y()
+    checkThis()
+    obj2()
+    obj3.z()
+  },
+
   handleGetUserInfo(res) {
     console.log(res);
     // 判断用户是否允许授权
@@ -66,6 +125,9 @@ Page({
   onLoad: function (options) {
     console.log("onload");
     this.getUserInfo();
+
+    this.testTimeOut()
+    this.testSetInterval()
   },
 
   /**
@@ -93,7 +155,8 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    console.log("退出有定时器的页面,定时器编号为:", this.data.currentTimer)
+    clearInterval(this.data.currentTimer)
   },
 
   /**

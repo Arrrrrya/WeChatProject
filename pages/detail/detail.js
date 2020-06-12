@@ -68,6 +68,7 @@ Page({
         key: "isMusicOn",
         data: false
       })
+      onLoad();
     })
   },
 
