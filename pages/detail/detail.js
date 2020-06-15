@@ -68,7 +68,9 @@ Page({
         key: "isMusicOn",
         data: false
       })
-      onLoad();
+      this.setData({
+        isMusicPlay:false
+      })
     })
   },
 

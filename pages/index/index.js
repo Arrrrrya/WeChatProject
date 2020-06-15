@@ -37,7 +37,7 @@ Page({
         console.log(i++, "定时器运行中: ", that.data.currentTimer)
         if (i == 5) {
           clearTimeout(that.data.currentStopTimer)
-          console.log("对不起，截胡了: ", that.data.currentTimer)
+          console.log("对不起，截胡了: ", that.data.currentStopTimer)
         }
         // if(i == 10){
         //   clearInterval(n)
