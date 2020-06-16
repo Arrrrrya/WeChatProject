@@ -4,7 +4,8 @@
     "pages/list/list",
     "pages/detail/detail",
     "pages/movies/movies",
-    "pages/movieDetail/movieDetail"
+    "pages/movieDetail/movieDetail",
+    "pages/test/test"
   ],
   "requiredBackgroundModes": [
     "audio",
@@ -17,7 +18,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/list/list",
         "text": "文章",
         "iconPath": "/images/tab/yuedu.png",
@@ -28,6 +30,10 @@
         "text": "电影",
         "iconPath": "/images/tab/dianying.png",
         "selectedIconPath": "/images/tab/dianying_hl.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "demo"
       }
     ]
   }

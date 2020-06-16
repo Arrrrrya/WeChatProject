@@ -1,0 +1,9 @@
+<!--pages/test/test.wxml-->
+<view class="mainView">
+  <button class="btn_1" bindtap="handle_btn_1" type="primary" size="mini" style="default">测试Promise</button>
+  <button class="btn_2" bindtap="handle_btn_2" type="primary" size="mini" style="default">调用Promise</button>
+  <button class="btn_3" bindtap="handle_btn_3" type="primary" size="mini" style="default">执行顺序1</button>
+  <button class="btn_4" bindtap="handle_btn_4" type="primary" size="mini" style="default">执行顺序2</button>
+  <button class="btn_5" bindtap="handle_btn_5" type="primary" size="mini" style="default">同步promise</button>
+</view>
+

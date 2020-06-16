@@ -1,0 +1,13 @@
+/* pages/test/test.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.mainView{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+button{
+  margin-top: 10rpx;
+}
